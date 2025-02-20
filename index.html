@@ -31,7 +31,7 @@
         width: 100%;
         height: 100vh;
         background: radial-gradient(circle at center, rgba(255, 255, 255, 0.6) 60%, rgba(0, 0, 0, 0.2) 100%);
-        z-index: -1;
+        z-index: -100;
         pointer-events: none;
         transition: opacity 0.3s ease;
     }
@@ -175,18 +175,38 @@
     }
 
     footer {
-        position: relative;
-        margin-top: 20px;
-        background-color: transparent;
-        text-align: center;
-        padding: 5px 0;
-        font-size: 12px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        z-index: 4;
-    }
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      background-color: transparent;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+      z-index: 4;
+  }
+
+  footer a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+  }
+
+  footer a:hover {
+      text-decoration: underline;
+  }
+
+  .social-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+
     .featured-image {
         width: 80%; /* Adjust as needed */
         max-width: 900px; /* Ensures it doesn't get too large */
@@ -214,6 +234,8 @@
 }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
 
 
@@ -274,6 +296,7 @@
         <!-- <h1></h1> -->
         <div class="screenshot-grid-wrapper" style="margin-bottom: 20px;">
             <div class="screenshot-grid">
+              
                 <a href="https://www.praxisklinik-implantologie.de/" target="_blank">
                   <img src="https://lh3.googleusercontent.com/p/AF1QipPPASXEnc7tjlfQzxljm1i4fkT9g0mUAacqr22w=s680-w680-h510">
                 </a>
@@ -284,16 +307,44 @@
         </div>
         <!-- <h1></h1> -->
 
-        <div class="vignette"></div>
     </div>
 
     <!-- Impressum -->
     <footer>
-        <!-- <p>AkkViz AG</p> -->
-        <!-- <p>Hüttschlager Weg 2, 34582 Borken</p> -->
-        <!-- <p>+41782566901</p> -->
-        <!-- <p>Yvonne Akkoyun</p> -->
-        <p><a href="mailto:info@yvonne-akkoyun.de">info@yvonne-akkoyun.de</a></p>
-    </footer>
+      <p>
+          <a href="https://www.facebook.com/MetinAkkoyunPraxisklinikPhilippsthal/" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
+              Praxis
+          </a>
+      </p>
+      
+      <p>
+        <a href="https://www.facebook.com/yvonne.akkoyun.3/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
+            Privat
+        </a>
+    </p>
+      <p>
+          <a href="mailto:info@yvonne-akkoyun.de">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" class="social-icon">
+              E-Mail
+          </a>
+      </p>
+      <p>
+        <a href="https://www.instagram.com/yvonneakkoyun/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+            Privat
+        </a>
+    </p>
+    <p>
+        <a href="https://www.instagram.com/praxis_zahn/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+            Praxis
+        </a>
+    </p>
+  </footer>
+  
+  <div class="vignette"></div>
+  
 </body>
 </html>
