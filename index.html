@@ -285,23 +285,48 @@
           <p>Als Praxisleitung der Praxisklinik für Implantologie und ästhetische Zahnheilkunde in Philippsthal kümmere ich mich um das Management und die Personalleitung der Praxis, desweiteren stehe ich unseren Patienten für Fragen rund ums Rechnungswesen zur Verfügung.  
             Außerdem bin ich Geschäftsführerin der Green Village Living GmbH und betreue aktuell das Projekt „ Green Village Fritzlar“ Am Hohlen Graben in Fritzlar. Mein beruflicher Alltag dreht sich um Organisation, Ablaufoptimierung und ich bin direkte Ansprechpartnerin für beide Unternehmen. 
             In meiner Freizeit interessiere ich mich für Musik und Meditation.</p>
-          <h1 id="berufsweg-title">Berufsweg ▼</h1>
-        <img id="berufsweg-image" src="berufsweg.png" class="featured-image" style="display: none;">
-        
-        <script>
-          document.getElementById("berufsweg-title").addEventListener("click", function() {
-              var image = document.getElementById("berufsweg-image");
-              var title = document.getElementById("berufsweg-title");
-              
-              if (image.style.display === "none") {
-                  image.style.display = "block";
-                  title.innerHTML = "Berufsweg ▲"; // Change arrow direction
-              } else {
-                  image.style.display = "none";
-                  title.innerHTML = "Berufsweg ▼";
+            
+            <h1 id="berufsweg-title" class="expandable-title">
+              Berufsweg <span class="bracket">⌵</span>
+            </h1>
+            <img id="berufsweg-image" src="berufsweg.png" class="featured-image" style="display: none;">
+            
+            <style>
+              .expandable-title {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
               }
-          });
-        </script>
+            
+              .bracket {
+                display: inline-block;
+                transition: transform 0.3s ease;
+                font-size: 20px;
+              }
+            
+              .expanded .bracket {
+                transform: rotate(-180deg); /* Rotates the ⌵ upside down */
+              }
+            </style>
+            
+            <script>
+              document.getElementById("berufsweg-title").addEventListener("click", function() {
+                  var image = document.getElementById("berufsweg-image");
+                  var title = document.getElementById("berufsweg-title");
+            
+                  if (image.style.display === "none") {
+                      image.style.display = "block";
+                      title.classList.add("expanded");
+                  } else {
+                      image.style.display = "none";
+                      title.classList.remove("expanded");
+                  }
+              });
+            </script>
+            
+            
+            
+
 
 <!--   
           <h1 style="margin-top: 90px">Our Services</h1>
