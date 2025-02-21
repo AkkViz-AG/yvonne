@@ -285,6 +285,26 @@
           <p>Als Praxisleitung der Praxisklinik für Implantologie und ästhetische Zahnheilkunde in Philippsthal kümmere ich mich um das Management und die Personalleitung der Praxis, desweiteren stehe ich unseren Patienten für Fragen rund ums Rechnungswesen zur Verfügung.  
             Außerdem bin ich Geschäftsführerin der Green Village Living GmbH und betreue aktuell das Projekt „ Green Village Fritzlar“ Am Hohlen Graben in Fritzlar. Mein beruflicher Alltag dreht sich um Organisation, Ablaufoptimierung und ich bin direkte Ansprechpartnerin für beide Unternehmen. 
             In meiner Freizeit interessiere ich mich für Musik und Meditation.</p>
+          <h1 id="berufsweg-title" style="font-size: 46px; margin-bottom: 0px; letter-spacing: 11px; cursor: pointer; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.0);">
+          Berufsweg ▼
+        </h1>
+        <img id="berufsweg-image" src="berufsweg.png" class="featured-image" style="display: none;">
+        
+        <script>
+          document.getElementById("berufsweg-title").addEventListener("click", function() {
+              var image = document.getElementById("berufsweg-image");
+              var title = document.getElementById("berufsweg-title");
+              
+              if (image.style.display === "none") {
+                  image.style.display = "block";
+                  title.innerHTML = "Berufsweg ▲"; // Change arrow direction
+              } else {
+                  image.style.display = "none";
+                  title.innerHTML = "Berufsweg ▼";
+              }
+          });
+        </script>
+
 <!--   
           <h1 style="margin-top: 90px">Our Services</h1>
           <p>At AkkViz, we take your 2D architectural plans and transform them into photorealistic, real-time and interactive 3D visualizations.</p>
